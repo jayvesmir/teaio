@@ -34,6 +34,8 @@ struct TeaioArgs {
 };
 
 #define TEAIO_FAILED(error) (error.code != Errno::SUCCESS)
+#define TEAIO_ERROR_TYPE(error) (teaioGetErrnoString(error.code))
+
 Errno __TeaioArgs_complete(TeaioArgs* _args);
 Error __teaioOpenInput(const char* _filepath, AVFormatContext** _formatContext, AVDictionary** _options = NULL);
 Error __teaioOpenOutput(const char* _filepath, AVFormatContext** _formatContext, const AVOutputFormat** _format);

@@ -1,0 +1,9 @@
+# Directories
+.vscode/
+build/
+
+res/
+lib/ffmpeg/
+
+# Files
+run.*
